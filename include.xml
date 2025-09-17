@@ -1,0 +1,20 @@
+<xml>
+    <pragma once="true" />
+
+    <files id="haxe">
+        <compilerflag value="-I${DEVKITPRO}/libnx/include" if="nx"/>
+        <compilerflag value="-lnx" if="nx"/>
+    </files>
+
+    <files id="__main__">
+        <compilerflag value="-I${DEVKITPRO}/libnx/include" if="nx"/>
+        <compilerflag value="-lnx" if="nx"/>
+
+    </files>
+
+    <target id="haxe">
+        <section if="nx">
+            <lib name="-lnx" />
+        </section>
+    </target>
+</xml>

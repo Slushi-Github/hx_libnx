@@ -1,0 +1,13 @@
+{
+    "name": "hx_libnx",
+    "url" : "https://github.com/Slushi-Github/hx_libnx",
+    "license": "MIT",
+    "tags": ["haxe", "nintendo", "switch", "cpp", "binds", "bindings", "native"],
+    "description": "Haxe/hxcpp @:native bindings for libnx (Nintendo Switch homebrew library)",
+    "version": "0.0.1",
+    "releasenote": "",
+    "contributors": ["Slushi"],
+    "dependencies": {
+        "hxcpp": ""
+    }
+}

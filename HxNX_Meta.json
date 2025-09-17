@@ -1,0 +1,20 @@
+{
+    "libVersion": "0.0.1",
+    "haxeLibs": [],
+    "switchLibs": [],
+    "mainDefines": [],
+    "cDefines": [
+        "-Wreorder",
+        "-Wstrict-aliasing",
+        "-Winvalid-offsetof",
+        "-Wsign-compare",
+        "-Wunknown-pragmas"
+    ],
+    "cppDefines": [
+        "-Wreorder",
+        "-Wstrict-aliasing",
+        "-Winvalid-offsetof",
+        "-Wsign-compare",
+        "-Wunknown-pragmas"
+    ]
+}
