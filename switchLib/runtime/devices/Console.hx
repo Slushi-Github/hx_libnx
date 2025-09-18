@@ -14,4 +14,7 @@ extern class Console {
 
     @:native("consoleUpdate")
     extern public static function consoleUpdate(console:Null<Int>):Void;
+
+    @:native("consoleExit")
+    extern public static function consoleExit(console:Null<Int>):Void;
 }
