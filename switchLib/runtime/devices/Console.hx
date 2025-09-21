@@ -17,4 +17,7 @@ extern class Console {
 
     @:native("consoleExit")
     extern public static function consoleExit(console:Null<Int>):Void;
+
+    @:native("consoleClear")
+    extern public static function consoleClear():Void;
 }
