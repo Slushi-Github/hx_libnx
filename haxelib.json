@@ -4,10 +4,9 @@
     "license": "MIT",
     "tags": ["haxe", "nintendo", "switch", "cpp", "binds", "bindings", "native"],
     "description": "Haxe/hxcpp @:native bindings for libnx (Nintendo Switch homebrew library)",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "releasenote": "",
     "contributors": ["Slushi"],
     "dependencies": {
-        "hxcpp": ""
     }
 }
