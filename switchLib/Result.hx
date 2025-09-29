@@ -9,7 +9,7 @@ import switchLib.Types.ResultType;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
-class Result {
+extern class Result {
     @:native("R_SUCCEEDED")
     extern public static function R_SUCCEEDED(res:ResultType):Bool;
 

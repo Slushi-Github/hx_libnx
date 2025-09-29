@@ -9,7 +9,7 @@ import switchLib.Types.ResultType;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
-class Romfs_dev {
+extern class Romfs_dev {
     @:native("romfsInit")
     extern public static function romfsInit():ResultType;
 

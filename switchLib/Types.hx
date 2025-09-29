@@ -7,6 +7,6 @@ package switchLib;
 import cpp.*;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
-@:include("switch.h")
+@:include("switch/types.h")
 @:native("Result")
-typedef ResultType = UInt32 // To avoid conflicts with Result class...
+extern typedef ResultType = UInt32 // To avoid conflicts with Result class...
