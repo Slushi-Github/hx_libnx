@@ -6,6 +6,8 @@ package switchLib.services;
 
 import cpp.*;
 
+import switchLib.Types.ResultType;
+
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
 @:native("AppletType")
@@ -30,4 +32,10 @@ extern class Applet {
 
     @:native("appletExit")
     extern public static function appletExit():Void;
+
+    @:native("appletLockExit")
+    extern public static function appletLockExit():ResultType;
+
+    @:native("appletUnlockExit")
+    extern public static function appletUnlockExit():ResultType;
 }

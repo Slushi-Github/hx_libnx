@@ -6,6 +6,8 @@ package switchLib.runtime;
 
 import cpp.*;
 
+import switchLib.services.Hid;
+
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
 @:native("PadState")
@@ -27,6 +29,21 @@ extern class Pad {
     @:native("padUpdate")
     extern public static function padUpdate(pad:Pointer<PadState>):Void;
 
+    @:native("padGetButtons")
+    extern public static function padGetButtons(pad:ConstPointer<PadState>):UInt64;
+
     @:native("padGetButtonsDown")
     extern public static function padGetButtonsDown(pad:ConstPointer<PadState>):UInt64;
+
+    @:native("padGetButtonsUp")
+    extern public static function padGetButtonsUp(pad:ConstPointer<PadState>):UInt64;
+
+    @:native("padGetStickPos")
+    extern public static function padGetStickPos(pad:ConstPointer<PadState>, stick:Int):HidAnalogStickState;
+
+    @:native("padIsHandheld")
+    extern public static function padIsHandheld(pad:ConstPointer<PadState>):Bool;
+
+    @:native("padGetStyleSet")
+    extern public static function padGetStyleSet(pad:ConstPointer<PadState>):Bool;
 }
