@@ -4,8 +4,6 @@ package switchLib.runtime;
 #error "This file should only be compiled for the Nintendo Switch target"
 #end
 
-import cpp.*;
-
 import switchLib.services.Hid;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')

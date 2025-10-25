@@ -4,8 +4,25 @@ package switchLib.services;
 #error "This file should only be compiled for the Nintendo Switch target"
 #end
 
-import cpp.*;
-import switchLib.Types.ResultType;
+@:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
+@:include("switch.h")
+@:native("SetSysProductModel")
+extern enum SetSysProductModel {
+    @:native("SetSysProductModel_Invalid")
+    SetSysProductModel_Invalid;
+    @:native("SetSysProductModel_Nx")
+    SetSysProductModel_Nx;
+    @:native("SetSysProductModel_Copper")
+    SetSysProductModel_Copper;
+    @:native("SetSysProductModel_Iowa")
+    SetSysProductModel_Iowa;
+    @:native("SetSysProductModel_Hoag")
+    SetSysProductModel_Hoag;
+    @:native("SetSysProductModel_Calcio")
+    SetSysProductModel_Calcio;
+    @:native("SetSysProductModel_Aula")
+    SetSysProductModel_Aula;
+}
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
@@ -68,4 +85,7 @@ extern class Set {
 
     @:native("setMakeLanguage")
     extern public static function setMakeLanguage(languageCode:UInt64, language:Pointer<SetLanguage>):ResultType;
+
+    @:native("setsysGetProductModel")
+    extern public static function setGetSystemProductModel(productModel:Pointer<SetSysProductModel>):ResultType;
 }

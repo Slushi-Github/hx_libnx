@@ -3,6 +3,7 @@
     "haxeLibs": [],
     "switchLibs": [],
     "mainDefines": [],
+    "hxDefines": [],
     "cDefines": [
         "-Wreorder",
         "-Wstrict-aliasing",

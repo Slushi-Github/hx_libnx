@@ -6,10 +6,7 @@ package switchLib.runtime.devices;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
-extern class Romfs_dev {
-    @:native("romfsInit")
-    extern public static function romfsInit():ResultType;
-
-    @:native("romfsExit")
-    extern public static function romfsExit():ResultType;
+extern class Socket {
+    @:native("socketInitializeDefault")
+    extern public static function socketInitializeDefault():ResultType;
 }

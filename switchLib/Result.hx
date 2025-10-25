@@ -4,9 +4,6 @@ package switchLib;
 #error "This file should only be compiled for the Nintendo Switch target"
 #end
 
-import cpp.*;
-import switchLib.Types.ResultType;
-
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
 extern class Result {

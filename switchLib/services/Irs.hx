@@ -1,12 +1,10 @@
 package switchLib.services;
 
-import switchLib.Types.ResultType;
 #if !HX_NX
 #error "This file should only be compiled for the Nintendo Switch target"
 #end
 
-import cpp.*;
-import switchLib.services.Hid.HidNpadIdType;
+import switchLib.services.Hid;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
