@@ -39,6 +39,21 @@ extern class Hid {
 
     @:native("hidSendVibrationValues")
     extern public static function hidSendVibrationValues(handles:RawPointer<HidVibrationDeviceHandle>, value:ConstPointer<HidVibrationValue>, count:Int32):ResultType;
+
+    @:native("hidGetNpadControllerColorSplit")
+    extern public static function hidGetNpadControllerColorSplit(id:Int32, color_left:Pointer<HidNpadControllerColor>, color_right:Pointer<HidNpadControllerColor>):ResultType;
+}
+
+@:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
+@:include("switch.h")
+@:native("HidNpadControllerColor")
+@:structAccess
+extern class HidNpadControllerColor {
+    public var main:UInt32;
+    public var sub:UInt32;
+
+    @:haxe.warning("-WExternWithExpr")
+    public function new() {}
 }
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
