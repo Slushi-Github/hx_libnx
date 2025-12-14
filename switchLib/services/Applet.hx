@@ -19,6 +19,23 @@ extern enum abstract AppletType(Int) to Int {
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
+@:native("AppletOperationMode")
+extern enum abstract AppletOperationMode(Int) to Int {
+    @:native("AppletOperationMode_Handheld") var AppletOperationMode_Handheld;
+    @:native("AppletOperationMode_Console") var AppletOperationMode_Console;
+}
+
+@:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
+@:include("switch.h")
+@:native("AppletFocusState")
+extern enum abstract AppletFocusState(Int) to Int {
+    @:native("AppletFocusState_InFocus") var AppletFocusState_InFocus;
+    @:native("AppletFocusState_OutOfFocus") var AppletFocusState_OutOfFocus;
+    @:native("AppletFocusState_Background") var AppletFocusState_Background;
+}
+
+@:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
+@:include("switch.h")
 extern class Applet {
     @:native("appletMainLoop")
     extern public static function appletMainLoop():Bool;
@@ -34,4 +51,10 @@ extern class Applet {
 
     @:native("appletUnlockExit")
     extern public static function appletUnlockExit():ResultType;
+
+    @:native("appletGetOperationMode")
+    extern public static function appletGetOperationMode():AppletOperationMode;
+
+    @:native("appletGetFocusState")
+    extern public static function appletGetFocusState():AppletFocusState;
 }

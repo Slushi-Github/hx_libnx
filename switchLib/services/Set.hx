@@ -46,7 +46,7 @@ extern enum SetLanguage {
     SetLanguage_KO;
     @:native("SetLanguage_NL")
     SetLanguage_NL;
-    @:native("SetLanguage_PL")
+    @:native("SetLanguage_PT")
     SetLanguage_PT;
     @:native("SetLanguage_RU")
     SetLanguage_RU;

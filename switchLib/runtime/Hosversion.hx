@@ -6,7 +6,7 @@ package switchLib.runtime;
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
-class Hosversion {
+extern class Hosversion {
     @:native("HOSVER_MAJOR")
     extern public static function HOSVER_MAJOR(version:UInt32):UInt32;
 
