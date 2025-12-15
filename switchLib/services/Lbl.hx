@@ -7,11 +7,16 @@ package switchLib.services;
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
 @:include("switch.h")
 @:native("LblBacklightSwitchStatus")
-extern enum abstract LblBacklightSwitchStatus(Int) to Int {
-    @:native("LblBacklightSwitchStatus_Disabled") var LblBacklightSwitchStatus_Disabled;
-    @:native("LblBacklightSwitchStatus_Enabled") var LblBacklightSwitchStatus_Enabled;
-    @:native("LblBacklightSwitchStatus_Enabling") var LblBacklightSwitchStatus_Enabling;
-    @:native("LblBacklightSwitchStatus_Disabling") var LblBacklightSwitchStatus_Disabling;
+@:structAccess
+extern class LblBacklightSwitchStatus {
+    @:native("LblBacklightSwitchStatus_Disabled") 
+    public static var LblBacklightSwitchStatus_Disabled:Any;
+    @:native("LblBacklightSwitchStatus_Enabled") 
+    public static var LblBacklightSwitchStatus_Enabled:Any;
+    @:native("LblBacklightSwitchStatus_Enabling")  
+    public static var LblBacklightSwitchStatus_Enabling:Any;
+    @:native("LblBacklightSwitchStatus_Disabling") 
+    public static var LblBacklightSwitchStatus_Disabling:Any;
 }
 
 @:buildXml('<include name="${haxelib:hx_libnx}/include.xml"/>')
@@ -23,29 +28,23 @@ extern class Lbl {
     @:native("lblExit")
     extern public static function lblExit():Void;
 
+    @:native("lblSaveCurrentSetting")
+    extern public static function lblSaveCurrentSetting():ResultType;
+
     @:native("lblLoadCurrentSetting")
     extern public static function lblLoadCurrentSetting():ResultType;
 
     @:native("lblSetCurrentBrightnessSetting")
-    extern public static function lblSetCurrentBrightnessSetting(brightness:Float):ResultType;
+    extern public static function lblSetCurrentBrightnessSetting(brightness:Float32):ResultType;
 
     @:native("lblGetCurrentBrightnessSetting")
-    extern public static function lblGetCurrentBrightnessSetting(out_value:Pointer<Float>):ResultType;
+    extern public static function lblGetCurrentBrightnessSetting(out_value:Pointer<Float32>):ResultType;
 
     @:native("lblApplyCurrentBrightnessSettingToBacklight")
     extern public static function lblApplyCurrentBrightnessSettingToBacklight():ResultType;
 
     @:native("lblGetBrightnessSettingAppliedToBacklight")
-    extern public static function lblGetBrightnessSettingAppliedToBacklight(out_value:Pointer<Float>):ResultType;
-
-    @:native("lblEnableDimming")
-    extern public static function lblEnableDimming():ResultType;
-
-    @:native("lblDisableDimming")
-    extern public static function lblDisableDimming():ResultType;
-
-    @:native("lblIsDimmingEnabled")
-    extern public static function lblIsDimmingEnabled(out_value:Pointer<Bool>):ResultType;
+    extern public static function lblGetBrightnessSettingAppliedToBacklight(out_value:Pointer<Float32>):ResultType;
 
     @:native("lblSwitchBacklightOn")
     extern public static function lblSwitchBacklightOn(fade_time:UInt64):ResultType;
@@ -55,4 +54,13 @@ extern class Lbl {
 
     @:native("lblGetBacklightSwitchStatus")
     extern public static function lblGetBacklightSwitchStatus(out_value:Pointer<LblBacklightSwitchStatus>):ResultType;
+
+    @:native("lblEnableDimming")
+    extern public static function lblEnableDimming():ResultType;
+
+    @:native("lblDisableDimming")
+    extern public static function lblDisableDimming():ResultType;
+
+    @:native("lblIsDimmingEnabled")
+    extern public static function lblIsDimmingEnabled(out_value:Pointer<Bool>):ResultType;
 }
