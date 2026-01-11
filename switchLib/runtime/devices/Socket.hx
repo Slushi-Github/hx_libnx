@@ -9,4 +9,7 @@ package switchLib.runtime.devices;
 extern class Socket {
     @:native("socketInitializeDefault")
     extern public static function socketInitializeDefault():ResultType;
+
+    @:native("socketExit")
+    extern public static function socketExit():Void;
 }
