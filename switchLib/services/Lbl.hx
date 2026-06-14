@@ -63,4 +63,10 @@ extern class Lbl {
 
     @:native("lblIsDimmingEnabled")
     extern public static function lblIsDimmingEnabled(out_value:Pointer<Bool>):ResultType;
+
+    @:native("lblGetAmbientLightSensorValue")
+    extern public static function lblGetAmbientLightSensorValue(over_limit:Pointer<Bool>, lux:Pointer<Float32>):ResultType;
+
+    @:native("lblIsAmbientLightSensorAvailable")
+    extern public static function lblIsAmbientLightSensorAvailable(out_value:Pointer<Bool>):ResultType;
 }
